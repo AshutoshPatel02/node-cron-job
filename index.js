@@ -8,7 +8,7 @@ app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
 
-cron.schedule('* * * * *', () => {
+cron.schedule('0 * * * *', () => {
     console.log('running a task every minute');
     fs.appendFileSync('test.txt', 'running a task every hour\n', 'utf8', (err) => {
         if (err) throw err;
